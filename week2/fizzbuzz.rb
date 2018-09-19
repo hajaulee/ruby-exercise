@@ -3,16 +3,10 @@
 
 def fizzbuzz(n)
     for i in (1..n) do
-        if !(i%2).zero? and !(i%3).zero?
-            next
-        end
+        next if !(i%2).zero? and !(i%3).zero?
         print i.to_s << ": "
-        if (i%2).zero?
-            print "Fizz"
-        end
-        if (i%3).zero?
-            print "Buzz"
-        end
+        print "Fizz" if (i%2).zero?            
+        print "Buzz" if (i%3).zero?
         print "\n"
     end
 end
