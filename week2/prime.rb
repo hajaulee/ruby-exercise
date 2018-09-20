@@ -4,7 +4,7 @@ def showPrimeLessThan(n)
     2.upto(n) do |i|
         prime = true
         2.upto(i/2) do |j|
-            prime = if !(i%j).zero?
+            prime = !(i%j).zero?
             break if !prime
         end
         puts i.to_s if prime           
